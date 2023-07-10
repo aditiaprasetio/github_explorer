@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {ConfigProvider, Layout, Space} from 'antd';
+import MainApp from './screens';
+import { Content } from 'antd/es/layout/layout';
+import Title from 'antd/es/typography/Title';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ConfigProvider>
+      <Layout>
+        <Content className="site-content">
+          <Title level={3} style={{ textAlign: 'center' }}>
+            GitHub Repositories Explorer
+          </Title>
+          <MainApp />
+        </Content>
+      </Layout>
+    </ConfigProvider>
   );
 }
 
