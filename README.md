@@ -1,3 +1,8 @@
+# GitHub Repositories Explorer
+- Run `yarn install` to install all dependencies
+- Copy `.env.example` to `.env` and change the configurations
+- To start, run command `yarn start`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
