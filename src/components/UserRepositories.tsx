@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Card, Col, Row, Space, Spin } from 'antd';
+import { Col, Row, Spin } from 'antd';
 import { octokit } from '../libs/octokit';
-import { useDebounce } from 'use-debounce';
-import Title from 'antd/es/typography/Title';
 import Paragraph from 'antd/es/typography/Paragraph';
 import { StarFilled } from '@ant-design/icons';
 
@@ -12,13 +10,12 @@ type Props = {
 
 function UserRepositories(props: Props) {
   const [isLoading, setIsLoading] = useState(false);
-  const [keyword, setKeyword] = useState<string>('');
-  const [searchKeyword] = useDebounce(keyword, 500);
   const [repositories, setRepositories] = useState<{ name: string; description: string | null; countStar: number; url: string }[]>([]);
 
   useEffect(() => {
     fetchRepositories();
-  }, [])
+  }, []);
+
   const fetchRepositories = async () => {
     console.info('fetchRepositories');
 

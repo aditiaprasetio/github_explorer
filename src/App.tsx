@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {ConfigProvider, Layout, Space} from 'antd';
+import {ConfigProvider, Layout} from 'antd';
 import MainApp from './screens';
 import { Content } from 'antd/es/layout/layout';
 import Title from 'antd/es/typography/Title';

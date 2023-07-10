@@ -20,6 +20,7 @@ jobs:
         yarn install
         yarn build
       env:
+        CI: true
         REACT_PUBLIC_GITHUB_TOKEN: ${{ secrets.REACT_PUBLIC_GITHUB_TOKEN }}
 
     - name: Deploy

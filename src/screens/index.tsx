@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react';
-import { Button, Card, Col, Collapse, Empty, Form, Grid, Input, notification, Row, Space, Spin } from 'antd';
-import Search from 'antd/es/input/Search';
+import { useState } from 'react';
+import { Button, Card, Collapse, Empty, Form, Input, notification } from 'antd';
 import { octokit } from '../libs/octokit';
-import { useDebounce } from 'use-debounce';
+// import { useDebounce } from 'use-debounce';
 import UserRepositories from '../components/UserRepositories';
 import Paragraph from 'antd/es/typography/Paragraph';
 
@@ -11,7 +10,7 @@ const FETCH_USERS_LIMIT = 5;
 function MainApp() {
   const [isLoading, setIsLoading] = useState(false);
   const [keyword, setKeyword] = useState<string>('');
-  const [searchKeyword] = useDebounce(keyword, 500);
+  // const [searchKeyword] = useDebounce(keyword, 500);
 
   const [isResponseExist, setIsResponseExist] = useState<boolean>(false);
   const [users, setUsers] = useState<{username: string, name: string}[]>([]);
