@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
-import { Col, Row, Spin } from 'antd';
+import { Col, notification, Row, Spin } from 'antd';
 import { octokit } from '../libs/octokit';
 import Paragraph from 'antd/es/typography/Paragraph';
 import { StarFilled } from '@ant-design/icons';
@@ -40,6 +40,9 @@ function UserRepositories(props: Props) {
       }
       setIsLoading(false);
     } catch (err) {
+      notification.error({
+        message: `Failed to fetch repositories (username: ${props.username})`,
+      });
       console.error(err);
       setIsLoading(false);
     }

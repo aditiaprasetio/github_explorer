@@ -1,4 +1,9 @@
 # GitHub Repositories Explorer
+
+## Demo
+https://aditiaprasetio.github.io/github_explorer/
+
+## How to Install & Run
 - Run `yarn install` to install all dependencies
 - Copy `.env.example` to `.env` and change the configurations
 - To start, run command `yarn start`
