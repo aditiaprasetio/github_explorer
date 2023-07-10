@@ -76,16 +76,18 @@ function MainApp() {
   return (
     <Card>
       <Form onFinish={() => onSearch(keyword)}>
-        <Input
-          placeholder="Enter username"
-          // onSearch={onSearch}
-          onChange={(event) => onChangeKeyword(event.target.value)}
-          allowClear
-        />
+        <Form.Item htmlFor='keyword'>
+          <Input
+            id="keyword"
+            placeholder="Enter username"
+            // onSearch={onSearch}
+            onChange={(event) => onChangeKeyword(event.target.value)}
+            allowClear
+          />
+        </Form.Item>
         <Button
           onClick={() => onSearch(keyword)}
           block
-          style={{ marginTop: 10 }}
           type="primary"
           loading={isLoading}
         >
